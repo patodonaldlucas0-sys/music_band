@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href=https://fonts.google.com/specimen/Simonetta?categoryFilters=Serif:%2FSerif%2FHumanist+Venetian;Seasonal:%2FSeasonal%2FValentine%26apos;s+Day" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Band - La Belleza y Esencia de la Música</title>
+    <meta name="description" content="Plataforma profesional dedicada a la educación musical, la estética del sonido y recursos avanzados para bandas.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo-container">
+            <h1 class="project-title" onclick="switchTab('inicio')">Music Band</h1>
+        </div>
+        <button class="nav-back-btn" id="backToHome" style="display: none;" onclick="switchTab('inicio')">← Volver al Inicio</button>
+    </header>
+
+    <div class="main-layout">
+        <main class="content-area">
+            
+            <section id="inicio" class="tab-content active">
+                <div class="pro-hero-wrapper">
+                    <div class="pro-hero-content">
+                        <h2>La Música y su Belleza Trascendental</h2>
+                        <p class="hero-quote"><em>"La música es el lenguaje del alma; un puente invisible entre el silencio del universo y la emoción humana."</em></p>
+                        <p>Te damos la bienvenida a Music Band, una pagina en la que encontraras mucho contenido relacionado con la belleza de la musica. ¿Estas dispuesto a entrar en este mundo?</p>
+                        <div class="hero-actions">
+                            <a href="#" class="btn-primary" onclick="scrollToModules()">Explorar Sitios</a>
+                        </div>
+                    </div>
+                    
+                    <div class="pro-hero-triptych">
+                        <div class="triptych-card">
+                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Belleza de la música">
+                            <span>1. Belleza Sonora</span>
+                        </div>
+                        <div class="triptych-card">
+                            <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=800&q=80" alt="Orquesta sinfónica de instrumentos de viento">
+                            <span>2. Orquesta de Vientos</span>
+                        </div>
+                        <div class="triptych-card">
+                            <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=800&q=80" alt="Elementos musicales">
+                            <span>3. Elementos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="editorial-section">
+                    <div class="editorial-header">
+                        <h3>Reflexiones y Esencia Acústica</h3>
+                        <p>Poesía, teoría profunda y anatomía instrumental para comprender el verdadero significado del arte musical.</p>
+                    </div>
+
+                    <div class="editorial-grid">
+                        <div class="editorial-card">
+                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" alt="Poesía del pentagrama">
+                            <div class="editorial-content">
+                                <h4>Poética del Pentagrama</h4>
+                                <p class="editorial-subtitle">"Donde las palabras fallan, la música habla."</p>
+                                <p>Cada nota grabada en el papel es un latido congelado en el tiempo. La lectura musical no es un acto mecánico, sino la capacidad de descifrar la arquitectura emocional que el compositor diseñó para conmover al oyente.</p>
+                            </div>
+                        </div>
+
+                        <div class="editorial-card">
+                            <img src="https://images.unsplash.com/photo-1520523839896-51e8509e51c8?auto=format&fit=crop&w=800&q=80" alt="Instrumentos y su alma">
+                            <div class="editorial-content">
+                                <h4>Anatomía de los Instrumentos</h4>
+                                <p class="editorial-subtitle">"El metal y la madera cobran vida con el aliento."</p>
+                                <p>Desde la vibración de una caña de clarinete hasta la tensión milimétrica de un parche de caja, los instrumentos son extensiones físicas del cuerpo humano que transforman la presión del aire en pura belleza armónica.</p>
+                            </div>
+                        </div>
+
+                        <div class="editorial-card">
+                            <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=800&q=80" alt="Elementos de la música">
+                            <div class="editorial-content">
+                                <h4>Los Elementos Esenciales</h4>
+                                <p class="editorial-subtitle">Ritmo, melodía y armonía en perfecta balanza.</p>
+                                <p>El ritmo marca el pulso vital de la existencia, la melodía traza el camino de la narrativa y la armonía provee el color y la profundidad que transforman un sonido aislado en una obra de arte inmortales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modules-section-title" id="modulesGridAnchor">
+                    <h3>Catálogo de Sitios y Módulos</h3>
+                    <p>Selecciona una categoría para acceder a sus herramientas, recursos y ventanas especializadas.</p>
+                </div>
+
+                <div class="modules-grid">
+                    <div class="module-card" onclick="switchTab('teoria')">
+                        <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=600&q=80" alt="Teoría Musical">
+                        <div class="module-card-body">
+                            <h4>2. Teoría Musical Básica</h4>
+                            <p>Figuras rítmicas, pentagramas, claves y armaduras esenciales.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('ritmica')">
+                        <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=600&q=80" alt="Ejercicios Rítmicos">
+                        <div class="module-card-body">
+                            <h4>3. Ejercicios Rítmicos</h4>
+                            <p>Practica síncopas, tresillos y metrónomo visual interactivo.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('afinacion')">
+                        <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=600&q=80" alt="Afinación">
+                        <div class="module-card-body">
+                            <h4>4. Afinación y Entonación</h4>
+                            <p>Acorde de concierto y unificación limpia de la banda.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('repertorio')">
+                        <img src="https://images.unsplash.com/photo-1520523839896-51e8509e51c8?auto=format&fit=crop&w=600&q=80" alt="Partituras">
+                        <div class="module-card-body">
+                            <h4>5. Repertorio y Partituras</h4>
+                            <p>Descarga arreglos para bronces, maderas y percusión.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('perfuncion-bateria')">
+                        <img src="https://images.unsplash.com/photo-1543632486-d444458f2766?auto=format&fit=crop&w=600&q=80" alt="Percusión DCI">
+                        <div class="module-card-body">
+                            <h4>6. Percusión y Batería (DCI)</h4>
+                            <p>Rudimentos de caja, bombos múltiples y platos con precisión.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('metales-bajos')">
+                        <img src="https://images.unsplash.com/photo-1573871668368-c57371c0d53c?auto=format&fit=crop&w=600&q=80" alt="Metales Bajos">
+                        <div class="module-card-body">
+                            <h4>7. Instrumentos de Viento - Metales Bajos</h4>
+                            <p>Embocadura y proyección para Barítonos, Eufonios y Tuba.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('viento-madera')">
+                        <img src="https://images.unsplash.com/photo-1574825946112-9c322b647f3b?auto=format&fit=crop&w=600&q=80" alt="Vientos y Maderas">
+                        <div class="module-card-body">
+                            <h4>8. Vientos y Maderas</h4>
+                            <p>Digitaciones rápidas para flautas, clarinetes y saxofones.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('guardia-color')">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80" alt="Color Guard">
+                        <div class="module-card-body">
+                            <h4>9. Guardia de Color (Color Guard)</h4>
+                            <p>Coordinación visual, banderas, sables y fusiles sincronizados.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('tecnica-marcha')">
+                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=600&q=80" alt="Técnica de Marcha">
+                        <div class="module-card-body">
+                            <h4>10. Técnica de Marcha y Postura</h4>
+                            <p>Rollo de talón (heel roll), postura y alineación en campo.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('arreglos')">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" alt="Arreglos Musicales">
+                        <div class="module-card-body">
+                            <h4>11. Arreglos Musicales para Banda</h4>
+                            <p>Cómo adaptar temas populares al formato de marcha estudiantil.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('software-musical')">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Software Musical">
+                        <div class="module-card-body">
+                            <h4>12. Software y Apps Musicales</h4>
+                            <p>Herramientas digitales de notación y afinadores móviles.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('recursos-externos')">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Enlaces Web">
+                        <div class="module-card-body">
+                            <h4>13. Enlaces Web Educativos</h4>
+                            <p>Acceso directo a MusicTheory, MuseScore y DCI.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('interpretacion')">
+                        <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=600&q=80" alt="Interpretación">
+                        <div class="module-card-body">
+                            <h4>14. Interpretación y Expresión</h4>
+                            <p>Dinámicas, fraseo y comunicación emocional con el público.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('ejercicios-aliento')">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=600&q=80" alt="Control de Respiración">
+                        <div class="module-card-body">
+                            <h4>15. Control de Respiración</h4>
+                            <p>Ejercicios abdominales para notas sostenidas sin pérdida tonal.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('historia-dci')">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80" alt="Historia DCI">
+                        <div class="module-card-body">
+                            <h4>16. Historia de las Bandas DCI</h4>
+                            <p>Evolución de bandas tradicionales a cuerpos modernos.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('tutoriales-video')">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Videotutoriales">
+                        <div class="module-card-body">
+                            <h4>17. Videotutoriales Interactivos</h4>
+                            <p>Clases magistrales de ejecución instrumental paso a paso.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('foro-comunidad')">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Comunidad">
+                        <div class="module-card-body">
+                            <h4>18. Comunidad y Dudas</h4>
+                            <p>Espacio para intercambiar dudas entre directores y alumnos.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('evaluaciones')">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Autoevaluación">
+                        <div class="module-card-body">
+                            <h4>19. Autoevaluación Musical</h4>
+                            <p>Quizzes rápidos de notas, claves y rítmica para medir progreso.</p>
+                        </div>
+                    </div>
+
+                    <div class="module-card" onclick="switchTab('contacto-recursos')">
+                        <img src="https://images.unsplash.com/photo-1423784346385-c1d4dac9093a?auto=format&fit=crop&w=600&q=80" alt="Contacto">
+                        <div class="module-card-body">
+                            <h4>20. Contacto y Descargas</h4>
+                            <p>Ponte en contacto con los instructores del proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="teoria" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1200&q=80" alt="Teoría Musical"></div>
+                <h2>Teoría Musical Básica</h2>
+                <p>Comprende las figuras rítmicas, pentagramas, claves y armaduras de clave esenciales para cualquier músico escolar.</p>
+                <div class="multimedia-box"><p>📖 <strong>Lectura recomendada:</strong> Compases simples y compuestos.</p></div>
+            </section>
+
+            <section id="ritmica" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=1200&q=80" alt="Ejercicios Rítmicos"></div>
+                <h2>Ejercicios Rítmicos</h2>
+                <p>Practica la síncopa, los tresillos y las corcheas con metrónomo visual interactivo.</p>
+                <button class="btn-secondary" id="playMetronome">Simular Pulso (Metrónomo)</button>
+            </section>
+
+            <section id="afinacion" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=1200&q=80" alt="Afinación y Entonación"></div>
+                <h2>Afinación y Entonación</h2>
+                <p>La base de una gran banda estudiantil es una afinación limpia y unificada en el acorde de concierto (Si bemol / La).</p>
+            </section>
+
+            <section id="repertorio" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1520523839896-51e8509e51c8?auto=format&fit=crop&w=1200&q=80" alt="Repertorio y Partituras"></div>
+                <h2>Repertorio y Partituras</h2>
+                <p>Descarga arreglos musicales adaptados para bronces, maderas y percusión.</p>
+            </section>
+
+            <section id="perfuncion-bateria" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1543632486-d444458f2766?auto=format&fit=crop&w=1200&q=80" alt="Percusión y Batería DCI"></div>
+                <h2>Percusión y Batería (Estilo DCI)</h2>
+                <p>Rudimentos de caja (snare), bombos múltiples (tenors/quads) y platos con enfoque de precisión.</p>
+            </section>
+
+            <section id="metales-bajos" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1573871668368-c57371c0d53c?auto=format&fit=crop&w=1200&q=80" alt="Metales Bajos"></div>
+                <h2>Instrumentos de Viento - Metales Bajos</h2>
+                <p>Técnicas de embocadura, proyección de sonido y flexibilidad para Barítonos, Eufonios y Tuba.</p>
+            </section>
+
+            <section id="viento-madera" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1574825946112-9c322b647f3b?auto=format&fit=crop&w=1200&q=80" alt="Vientos y Maderas"></div>
+                <h2>Vientos y Maderas</h2>
+                <p>Estudio de digitaciones rápidas y pasajes melódicos para flautas, clarinetes y saxofones en la banda.</p>
+            </section>
+
+            <section id="guardia-color" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80" alt="Guardia de Color"></div>
+                <h2>Guardia de Color (Color Guard)</h2>
+                <p>Coordinación visual, manejo de banderas, sables y fusiles sincronizados con la música del show.</p>
+            </section>
+
+            <section id="tecnica-marcha" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1200&q=80" alt="Técnica de Marcha"></div>
+                <h2>Técnica de Marcha y Postura</h2>
+                <p>Rollo de talón (heel roll), postura corporal y alineación en campo abierto.</p>
+            </section>
+
+            <section id="arreglos" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80" alt="Arreglos Musicales"></div>
+                <h2>Arreglos Musicales</h2>
+                <p>Cómo adaptar temas populares al formato de marcha estudiantil.</p>
+            </section>
+
+            <section id="software-musical" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80" alt="Software Musical"></div>
+                <h2>Software y Aplicaciones</h2>
+                <p>Herramientas digitales de notación (MuseScore, Sibelius) y afinadores virtuales móviles.</p>
+            </section>
+
+            <section id="recursos-externos" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="Recursos Externos"></div>
+                <h2>Enlaces Web de Educación Musical Directa</h2>
+                <p>Accede con un solo clic a portales globales de aprendizaje:</p>
+                <div class="external-links-grid">
+                    <a href="https://www.musictheory.net" target="_blank" class="external-card">🌐 MusicTheory.net (Teoría Interactiva)</a>
+                    <a href="https://musescore.org" target="_blank" class="external-card">🎵 MuseScore (Partituras Libres)</a>
+                    <a href="https://www.dci.org" target="_blank" class="external-card">🏆 Drum Corps International (DCI)</a>
+                </div>
+            </section>
+
+            <section id="interpretacion" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=1200&q=80" alt="Interpretación Musical"></div>
+                <h2>Interpretación y Expresión Musical</h2>
+                <p>Dinámicas (fresco, forte, piano), fraseo y comunicación emocional con el público.</p>
+            </section>
+
+            <section id="ejercicios-aliento" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80" alt="Control de Respiración"></div>
+                <h2>Control de Respiración y Aliento</h2>
+                <p>Ejercicios abdominales para mantener notas sostenidas sin pérdida de calidad tonal.</p>
+            </section>
+
+            <section id="historia-dci" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80" alt="Historia DCI"></div>
+                <h2>Historia de las Bandas DCI</h2>
+                <p>Evolución de las bandas de marcha tradicionales hacia los cuerpos de música y desfile modernos.</p>
+            </section>
+
+            <section id="tutoriales-video" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Videotutoriales"></div>
+                <h2>Videotutoriales Interactivos</h2>
+                <p>Clases magistrales grabadas sobre ejecución instrumental paso a paso.</p>
+            </section>
+
+            <section id="foro-comunidad" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Comunidad Musical"></div>
+                <h2>Comunidad y Consultas</h2>
+                <p>Espacio para intercambiar dudas sobre instrumentos y partituras entre directores y estudiantes.</p>
+            </section>
+
+            <section id="evaluaciones" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80" alt="Autoevaluación"></div>
+                <h2>Autoevaluación Musical</h2>
+                <p>Quizzes rápidos de notas, claves y rítmica para medir tu progreso.</p>
+            </section>
+
+            <section id="contacto-recursos" class="tab-content">
+                <div class="window-banner"><img src="https://images.unsplash.com/photo-1423784346385-c1d4dac9093a?auto=format&fit=crop&w=1200&q=80" alt="Contacto Profesional"></div>
+                <h2>Contacto y Descargas Finales</h2>
+                <p>Ponte en contacto con los instructores del proyecto Music Band para colaboraciones.</p>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Music Band. Todos los derechos reservados. | La Belleza y Esencia del Sonido.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

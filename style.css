@@ -1,0 +1,474 @@
+/* Declaración de la tipografía local Bintang */
+@font-face {
+    font-family: 'Bintang';
+    src: url('Bintang.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Variables CSS de diseño avanzado y estética musical */
+:root {
+    --bg-dark: #0f1115;
+    --bg-card: #181b22;
+    --color-primary: #ff7f00;
+    --color-primary-hover: #ff942e;
+    --color-accent: #f3ca40;
+    --text-main: #f8f9fa;
+    --text-muted: #adb5bd;
+    --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-subtle: 0 10px 35px rgba(0, 0, 0, 0.45);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Great Vibes', cursive;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Encabezado con Degradé en el Título */
+.site-header {
+    background-color: rgba(13, 15, 18, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid rgba(243, 202, 64, 0.2);
+    padding: 1.2rem 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.project-title {
+    font-family: 'Bintang', sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    background: linear-gradient(135deg, #ff7f00 0%, #f3ca40 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+}
+
+.project-title:hover {
+    filter: brightness(1.2);
+}
+
+.nav-back-btn {
+    font-family: 'Bintang', 'Open Sans', sans-serif;
+    background: rgba(255, 127, 0, 0.15);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nav-back-btn:hover {
+    background: var(--color-primary);
+    color: var(--bg-dark);
+}
+
+/* Layout Principal */
+.main-layout {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.content-area {
+    flex: 1;
+    padding: 3rem 4%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Portada Profesional (Hero Section) con Tríptico Ampliado */
+.pro-hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3.5rem;
+    background: linear-gradient(135deg, #181310 0%, #221812 50%, #15181f 100%);
+    border: 1px solid rgba(243, 202, 64, 0.25);
+    padding: 4.5rem;
+    border-radius: 24px;
+    margin-bottom: 3.5rem;
+    box-shadow: var(--shadow-subtle);
+    align-items: center;
+}
+
+.pro-hero-content h2 {
+    font-family: 'Bintang', sans-serif;
+    color: var(--color-accent);
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    font-weight: normal;
+}
+
+.hero-quote {
+    color: var(--text-main);
+    font-size: 1.25rem;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    border-left: 3px solid var(--color-primary);
+    padding-left: 1rem;
+}
+
+.pro-hero-content p {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    margin-bottom: 2.2rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Tríptico Visual de Portada Ampliado e Inmersivo */
+.pro-hero-triptych {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    height: 400px;
+}
+
+.triptych-card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 127, 0, 0.35);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    transition: var(--transition);
+}
+
+.triptych-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.triptych-card:hover img {
+    transform: scale(1.08);
+}
+
+.triptych-card span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(15,17,21,0.95), transparent);
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: center;
+    padding: 1.2rem 0.5rem 0.8rem 0.5rem;
+}
+
+/* Sección Editorial de Contenido Profundo */
+.editorial-section {
+    margin-bottom: 4rem;
+}
+
+.editorial-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.editorial-header h3 {
+    font-family: 'Bintang', sans-serif;
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.editorial-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.editorial-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.editorial-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-5px);
+}
+
+.editorial-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.editorial-content {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.editorial-content h4 {
+    font-family: 'Bintang', sans-serif;
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.editorial-subtitle {
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.editorial-content p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* Título de la sección de módulos */
+.modules-section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.modules-section-title h3 {
+    font-family: 'Bintang', sans-serif;
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.modules-section-title p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* Grid de las 20 Tarjetas de Módulos */
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.module-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-subtle);
+    display: flex;
+    flex-direction: column;
+}
+
+.module-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(255, 127, 0, 0.2);
+}
+
+.module-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.module-card-body {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.module-card-body h4 {
+    font-family: 'Bintang', sans-serif;
+    color: var(--color-accent);
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+
+.module-card-body p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Estilo para las Ventanas de Contenido Específicas (Detalle) */
+.window-banner {
+    width: 100%;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid rgba(243, 202, 64, 0.2);
+}
+
+.window-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tab-content h2 {
+    font-family: 'Bintang', sans-serif;
+    font-size: 2.8rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.tab-content > p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 900px;
+}
+
+.multimedia-box {
+    background-color: var(--bg-card);
+    border-left: 4px solid var(--color-accent);
+    padding: 1.5rem;
+    border-radius: 0 10px 10px 0;
+    margin-top: 1.5rem;
+    box-shadow: var(--shadow-subtle);
+}
+
+.external-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.external-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(243, 202, 64, 0.2);
+    color: var(--text-main);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    transition: var(--transition);
+    box-shadow: var(--shadow-subtle);
+}
+
+.external-card:hover {
+    background-color: var(--color-accent);
+    color: var(--bg-dark);
+    transform: translateY(-3px);
+}
+
+/* Botones */
+.btn-primary, .btn-secondary {
+    font-family: 'Bintang', 'Open Sans', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--bg-dark);
+    box-shadow: 0 4px 15px rgba(255, 127, 0, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    margin-top: 1.5rem;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent);
+    color: var(--bg-dark);
+}
+
+/* Footer */
+.site-footer {
+    background-color: rgba(13, 15, 18, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+/* Media Queries Responsivas */
+@media (max-width: 1024px) {
+    .pro-hero-wrapper {
+        grid-template-columns: 1fr;
+        padding: 3rem;
+    }
+    .pro-hero-triptych {
+        height: 300px;
+    }
+}
